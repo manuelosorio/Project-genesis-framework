@@ -617,10 +617,6 @@ i {
   content: "$pg-pause";
 }
 
-.pg-play:before {
-  content: "$pg-play";
-}
-
 .flexcontainer {
   display: -webkit-box;
   display: -webkit-flex;
