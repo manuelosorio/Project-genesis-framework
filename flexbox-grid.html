@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/project-genesis.css">
+    
+    <title>Reponsive Grid Test</title>
+</head>
+<body>
+<h1 style="text-align:center;">Project Genesis - Flexbox Grid</h1>
+
+<div class="row" style="justify-content: center; display: flex;">
+	<div class="col col-3"><h2>Usage:</h2></div>
+	<ul class="col col-8"> 
+		<li class="col col-4">Follow normal grid naming conventions</li>
+		<li class="col col-4">Add an extension if you want to move a column to another spot with an extension of 'col-order-{Column spot #}</li>
+	</ul>
+</div>
+
+<div class="row">
+  <div class="box col col-7 col-order-2">
+    .col .col-7 .col-order-2
+  </div>
+  <div class="box col col-5">
+    .col .col-5
+  </div>
+</div>
+
+<div class="row">
+  <div class="box col col-8">
+    Box 1
+  </div>
+  <div class="box col col-4">
+    Box 2
+  </div>
+</div>
+
+<div class="row">
+  <div class="box col col-9 col-order-2">
+    Box 1
+  </div>
+  <div class="box col col-3">
+    Box 2
+  </div>
+</div>
+
+<div class="row">
+  <div class="box col col-10">
+    Box 1
+  </div>
+  <div class="box col col-2">
+    Box 2
+  </div>
+</div>
+
+<div class="row">
+  <div class="col col-4 col-order-2 flex-video">
+	<video width="100%" height="auto" controls dropzone="move" lang="en">
+		<source src="dasdfgfsr5r4ra.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+  </div>
+  <div class="col col-4 col-order-3 flex-video">
+	<!--iframe class="vender" src="https://www.youtube-nocookie.com/embed/6FtiSGkjeos?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen=""></iframe -->
+  </div>
+  <div class="col col-4 col-order-1 flex-video">
+	<video width="100%" height="auto" controls dropzone="move" lang="en">
+		<source src="dasdfgfsr5r4ra.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+  </div>
+</div>
+
+
+</body>
+</html>

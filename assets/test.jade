@@ -1,0 +1,29 @@
+.row
+	.col-12.cbox
+		h1 Video Player
+br
+#video_player
+	video#video
+		source(src='Intro-StormofColorRunfixed.mp4', type='video/mp4')
+		// Safari / iOS, IE9
+		source(src='http://files.simey.me/html5-vids/trailer.webm', type='video/webm')
+		// Chrome10+, Ffx4+, Opera10.6+
+		source(src='http://files.simey.me/html5-vids/trailer.ogv', type='video/ogg')
+		// Firefox3.6+ / Opera 10.5+
+		.loading
+			| I have a bad feeling about this... 
+			br
+			| ... your browser doesn't support the video format!
+	#video_controls_bar
+		button#playpausebtn
+			i.pg-play
+		input#seekslider(type='range', min='0', max='100', value='0', step='1')
+		span#time
+			span#cTimeText 00:00
+			|   /
+			span#dTimeText 00:00
+		button#mutebtn
+			i.pg-max-vol
+		input#volumeSlider(type='range', min='0', max='100', value='100', step='.05')
+		button#fullscreenbtn
+			i.pg-enter-fullscrn

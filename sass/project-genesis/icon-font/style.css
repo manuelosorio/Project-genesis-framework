@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Project-Genesis';
+    src:    url('fonts/Project-Genesis.eot');
+    src:    url('fonts/Project-Genesis.eot') format('embedded-opentype'),
+        url('fonts/Project-Genesis.ttf') format('truetype'),
+        url('fonts/Project-Genesis.woff?9homes') format('woff'),
+        url('fonts/Project-Genesis.svg?9homes#Project-Genesis') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'Project-Genesis' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pg-enter-fullscrn:before {
+    content: "\e900";
+}
+.pg-max-vol:before {
+    content: "\e901";
+}
+.pg-leave-fullscrn:before {
+    content: "\e902";
+}
+.pg-min-volume:before {
+    content: "\e903";
+}
+.pg-med-vol:before {
+    content: "\e904";
+}
+.pg-muted:before {
+    content: "\e905";
+}
+.pg-pause:before {
+    content: "\e906";
+}
+.pg-play:before {
+    content: "\e907";
+}
+
