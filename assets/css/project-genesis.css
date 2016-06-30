@@ -180,19 +180,17 @@ td, th {
   padding: 0;
 }
 
-.row {
+a.row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
 }
-
-.col {
+a.row .col {
   float: left;
 }
-
-.col + .col {
+a.row .col .col + .col {
   margin-left: 2%;
 }
 

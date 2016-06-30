@@ -39,9 +39,9 @@ textarea{overflow:auto}
 optgroup{font-weight:700}
 table{border-collapse:collapse;border-spacing:0}
 td,th{padding:0}
-.row{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;overflow:hidden}
-.col{float:left}
-.col+.col{margin-left:2%}
+a.row{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;overflow:hidden}
+a.row .col{float:left}
+a.row .col .col+.col{margin-left:2%}
 .col-1{width:6.5%}
 .col-2{width:15%}
 .col-3{width:23.5%}
