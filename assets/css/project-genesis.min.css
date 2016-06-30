@@ -94,8 +94,8 @@ body{font-family:sans-serif;padding:50px}
 #video_player #video_controls_bar button,#video_player #video_controls_bar input[type=button]{-webkit-appearance:none!important;border:none!important;background:0 0}
 #video_player #video_controls_bar input[type=range]{-webkit-appearance:none!important;background:#a2a2a2;border:#E2E2E2 1px solid;height:4px;border-radius:5px}
 #video_player #video_controls_bar input[type=range]::-webkit-slider-thumb{-webkit-appearance:none!important;background:#fff;height:15px;width:15px;border-radius:100%;cursor:pointer}
-#video_player #video_controls_bar :-webkit-full-screen,#video_player #video_controls_bar audio:-webkit-full-screen{z-index:0;position:absolute;left:0;bottom:0;right:0}
-#video_player #video_controls_bar :-moz-full-screen,#video_player #video_controls_bar audio:-moz-full-screen{z-index:2147483647;position:absolute;left:0;bottom:0;right:0}
+#video_player #video_controls_bar audio:-webkit-full-screen,#video_player #video_controls_bar:-webkit-full-screen{z-index:0;position:absolute;left:0;bottom:0;right:0}
+#video_player #video_controls_bar audio:-moz-full-screen,#video_player #video_controls_bar:-moz-full-screen{z-index:2147483647;position:absolute;left:0;bottom:0;right:0}
 #video_player #video_controls_bar>*{margin-left:15px}
 #time{color:#E2E2E2}
 button i{-webkit-transition:500ms ease;transition:500ms ease;color:#E2E2E2}
