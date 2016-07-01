@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -586,31 +587,35 @@ i {
 }
 
 .pg-enter-fullscrn:before {
-  content: "$pg-enter-fullscrn";
+  content: "";
 }
 
 .pg-max-vol:before {
-  content: "$pg-max-vol";
+  content: "";
 }
 
 .pg-leave-fullscrn:before {
-  content: "$pg-leave-fullscrn";
+  content: "";
 }
 
-.pg-min-volume:before {
-  content: "$pg-min-volume";
+.pg-min-vol:before {
+  content: "";
 }
 
 .pg-med-vol:before {
-  content: "$pg-med-vol";
+  content: "";
 }
 
 .pg-muted:before {
-  content: "$pg-muted";
+  content: "";
 }
 
 .pg-pause:before {
-  content: "$pg-pause";
+  content: "";
+}
+
+.pg-play:before {
+  content: "";
 }
 
 .flexcontainer {

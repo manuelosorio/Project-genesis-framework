@@ -1,3 +1,4 @@
+@import "variables"
 @font-face
 	font-family: 'Project-Genesis'
 	src: url('fonts/Project-Genesis.eot')
@@ -17,17 +18,18 @@ i
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 .pg-enter-fullscrn:before
-	content: "$pg-enter-fullscrn"
+	content: $pg-enter-fullscrn
 .pg-max-vol:before
-	content: "$pg-max-vol"
+	content: $pg-max-vol
 .pg-leave-fullscrn:before
-	content: "$pg-leave-fullscrn"
-.pg-min-volume:before
-	content: "$pg-min-volume"
+	content: $pg-leave-fullscrn
+.pg-min-vol:before
+	content: $pg-min-vol
 .pg-med-vol:before
-	content: "$pg-med-vol"
+	content: $pg-med-vol
 .pg-muted:before
-	content: "$pg-muted"
+	content: $pg-muted
 .pg-pause:before
-	content: "$pg-pause"
-.pg-play:before  
+	content: $pg-pause
+.pg-play:before
+	content: $pg-play
