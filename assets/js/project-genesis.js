@@ -63,16 +63,16 @@ function keyControl(e) {
 		seekTo = vid.duration * (seekSlider.value / 100) - 5;
 		vid.currentTime = seekTo;
 		break;
-			
+
 	case 38:
 
 		break;
-			
+
 	case 39:
 		seekTo = vid.duration * (seekSlider.value / 100) + 5;
 		vid.currentTime = seekTo;
 		break;
-			
+
 	case 40:
 		vid.volume = (volumeSlider.value / 100) - (10 / 100);
 		break;
@@ -88,7 +88,7 @@ function updateSeekTime() {
 		dMins = Math.floor(vid.duration / 60),
 		dSecs = Math.floor(vid.duration - dMins * 60);
 	seekSlider.value = newTime;
-	
+
 	if (cSecs < 10) { cSecs = "0" + cSecs; }
 	if (dSecs < 10) { dSecs = "0" + dSecs; }
 	if (cMins < 10) { cMins = "0" + cMins; }
@@ -101,7 +101,7 @@ function vidMute() {
 	if (vid.muted) {
 		vid.muted = false;
 		volumeSlider.value = vid.volume * 100;
-		
+
 		if (volumeSlider.value >= 61 && volumeSlider.value <= 100) {
 			mutebtn.innerHTML = '<i class="pg-max-vol"></i>';
 		} else if (volumeSlider.value >= 36 && volumeSlider.value <= 60) {
@@ -112,7 +112,7 @@ function vidMute() {
 			mutebtn.innerHTML = '<i class="pg-muted"></i>';
 		}
 
-		
+
 	} else {
 		vid.muted = true;
 		mutebtn.innerHTML = '<i class="pg-muted"></i>';
@@ -141,12 +141,11 @@ function setVolume() {
 	if (vid.muted) {
 		vid.muted = false;
 	}
-	
+
 }
 
 
 function toggleFullscreen() {
-	"use strict";
 	if (!fullscreen) {
 		if (player.requestFullScreen) {
 			player.requestFullScreen();
@@ -157,7 +156,7 @@ function toggleFullscreen() {
 		} else if (player.msRequestFullscreen) {
 			player.msRequestFullscreen();
 		}
-		
+
 		fullscreenbtn.innerHTML = '<i class="pg-leave-fullscrn"></i>';
 		fullscreen = true;
 	} else {
@@ -168,7 +167,7 @@ function toggleFullscreen() {
 		} else if (document.webkitExitFullscreen) {
 			document.webkitExitFullscreen();
 		}
-		
+
 		fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
 		fullscreen = false;
 	}
