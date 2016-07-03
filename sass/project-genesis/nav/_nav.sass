@@ -1,7 +1,30 @@
 .nav
 	display: flex
 	align-content: center
+	.menu
+		width: 60px
+		position: relative
 
+		.icon
+			height: 6px
+			border-radius: 3px
+			background: $silver
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			&::before, &::after
+				content: ""
+				height: 6px
+				width: 100%
+				border-radius: 3px
+				position: absolute
+				background: $aqua
+			&::before
+				top: -15px
+			&::after
+				top: 15px
 @import 'defualt'
 @import 'sidebar'
 @import 'fixed'

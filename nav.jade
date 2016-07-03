@@ -3,7 +3,7 @@ html
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="x-ua-compatible" content="ie=edge")
-		link(rel="stylesheet" href="assets/css/project-genesis.min.css")
+		link(rel="stylesheet" href="assets/css/project-genesis.css")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js")
 		script(src="assets/js/project-genesis.js")
 		title Project Genesis - Nav
@@ -16,7 +16,10 @@ html
 					list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
 						{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
 				each item in list
-					a(href="##{item.link}" class="item.class")= item.i
+					a(href="##{item.link}" class="#{item.class}")= item.i
+				
+				.menu
+						.icon
 
 		//- .nav.sidebar
 		//- .left

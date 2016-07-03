@@ -59,10 +59,9 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
 # Windows shortcuts
 *.lnk
-
+# *.bat
 *.cfg
 /.sass-cache/*
 
