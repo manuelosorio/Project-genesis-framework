@@ -3,26 +3,26 @@ html
 	head
 		meta(charset="utf-8")
 		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" href="assets/css/project-genesis.css")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js")
 		script(src="assets/js/project-genesis.js")
 		title Project Genesis - Nav
 	body
-		.row
-			.col.col-12
-				.nav.defualt
-					.left
-						.logo Project Genesis
-					.right
-						-
-							list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
-								{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
-						each item in list
-							a(href="##{item.link}" class="#{item.class}")= item.i
-						input(type="checkbox" id="menu-toggle")
-						labal(for="menu-toggle")
-							div(for="test").menu
-								.icon
+		.nav.defualt
+			.left
+				.logo Project Genesis
+			.right
+				-
+					list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
+						{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
+				each item in list
+					a(href="##{item.link}" class="#{item.class}")= item.i
+				.menu
+					.menu-bar
+					.menu-bar
+					.menu-bar
+
 		.row.hide
 			.col.col-12
 				.nav.defualt.fixed
@@ -36,9 +36,7 @@ html
 							a(href="##{item.link}" class="#{item.class}")= item.i
 						.menu
 							.icon
-
-
-
+							
 		.row.hide
 			.col.col-12
 				.nav.sidebar

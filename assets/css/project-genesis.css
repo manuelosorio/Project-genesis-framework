@@ -378,48 +378,6 @@ a.row .col .col + .col {
   display: flex;
   align-content: center;
 }
-.nav .menu {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 30px;
-  height: 45px;
-  font-size: 0;
-  text-indent: -9999px;
-  box-shadow: none;
-  border-radius: none;
-  border: none;
-  cursor: pointer;
-  background: transparent;
-  transition: background 0.3s;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.nav .menu .icon {
-  height: 5px;
-  transition: 200ms ease-in;
-  border-radius: 3px;
-  background: #E2E2E2;
-}
-.nav .menu .icon::before, .nav .menu .icon::after {
-  content: "";
-  height: 5px;
-  left: 0;
-  width: 100%;
-  border-radius: 3px;
-  position: absolute;
-}
-.nav .menu .icon::before {
-  top: 10pxWS;
-  background: #2AD8D3;
-}
-.nav .menu .icon::after {
-  bottom: 10px;
-  background: #4D6634;
-}
 
 .nav.defualt {
   width: 100%;
@@ -479,6 +437,35 @@ a.row .col .col + .col {
     padding-left: 25px;
   }
 }
+.menu {
+  position: relative;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.menu:hover .menu-bar {
+  background: #a2a2a2;
+}
+.menu .menu-bar {
+  height: 5px;
+  transition: 300ms ease-in-out;
+  border-radius: 3px;
+  background: #E2E2E2;
+  margin-bottom: 5px;
+}
+
+.menu.active .menu-bar:first-child {
+  transform: translate(0, 10px) rotate(45deg);
+}
+.menu.active .menu-bar:nth-child(2) {
+  transform: translate(45px, 0);
+  opacity: 0;
+}
+.menu.active .menu-bar:last-child {
+  transform: translate(0, -10px) rotate(-45deg);
+}
+
 .flex-video {
   position: relative;
   padding-bottom: 56%;

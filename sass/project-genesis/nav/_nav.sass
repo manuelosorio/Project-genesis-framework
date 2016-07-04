@@ -2,47 +2,7 @@
 	display: flex
 	align-content: center
 	input[type="checkbox"]
-
-	.menu
-		display: block
-		position: relative
-		overflow: hidden
-		margin: 0
-		padding: 0
-		width: 30px
-		height: 45px
-		font-size: 0
-		text-indent: -9999px
-		box-shadow: none
-		border-radius: none
-		border: none
-		cursor: pointer
-		background: transparent
-		transition: background 0.3s
-		appearance: none
-		-webkit-appearance: none
-		-moz-appearance: none
-		.icon
-			height: 5px
-			transition: 200ms ease-in
-			border-radius: 3px
-			background: $silver
-			// &:active
-			// 	background: $blue
-			// 	transform: rotate(90deg)
-			&::before, &::after
-				content: ""
-				height: 5px
-				left: 0
-				width: 100%
-				border-radius: 3px
-				position: absolute
-			&::before
-				top: 10pxWS
-				background: $aqua
-			&::after
-				bottom: 10px
-				background: $olive
 @import 'defualt'
 @import 'sidebar'
 @import 'fixed'
+@import 'menu/menu'

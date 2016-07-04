@@ -1,10 +1,14 @@
 /*global $, playPause, vidSeek, updateSeekTime, vidMute, setVolume, toggleFullscreen, keyControl */
-//$(document).ready(function () {
-//	'use strict';
-//
-//});
+// "use strict";
+$(document).ready(function () {
+	$('.menu').on('click', function(){
+	  $(this).toggleClass('active');
+	});
+});
+
 
 var vid, playbtn, seekSlider, cTimeText, dTimeText, mutebtn, volumeSlider, fullscreenbtn, player, fullscreen;
+
 function intializePlayer() {
 	// Set Object Ref
 	"use strict";
