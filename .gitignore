@@ -61,7 +61,7 @@ $RECYCLE.BIN/
 *.msp
 # Windows shortcuts
 *.lnk
-# *.bat
+*.bat
 *.cfg
 /.sass-cache/*
 

@@ -1,30 +1,48 @@
 .nav
 	display: flex
 	align-content: center
-	.menu
-		width: 60px
-		position: relative
+	input[type="checkbox"]
 
+	.menu
+		display: block
+		position: relative
+		overflow: hidden
+		margin: 0
+		padding: 0
+		width: 30px
+		height: 45px
+		font-size: 0
+		text-indent: -9999px
+		box-shadow: none
+		border-radius: none
+		border: none
+		cursor: pointer
+		background: transparent
+		transition: background 0.3s
+		appearance: none
+		-webkit-appearance: none
+		-moz-appearance: none
 		.icon
-			height: 6px
+			height: 5px
+			transition: 200ms ease-in
 			border-radius: 3px
 			background: $silver
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0
-			left: 0
+			// &:active
+			// 	background: $blue
+			// 	transform: rotate(90deg)
 			&::before, &::after
 				content: ""
-				height: 6px
+				height: 5px
+				left: 0
 				width: 100%
 				border-radius: 3px
 				position: absolute
-				background: $aqua
 			&::before
-				top: -15px
+				top: 10pxWS
+				background: $aqua
 			&::after
-				top: 15px
+				bottom: 10px
+				background: $olive
 @import 'defualt'
 @import 'sidebar'
 @import 'fixed'
