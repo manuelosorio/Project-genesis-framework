@@ -13,11 +13,12 @@ html
 			.left
 				.logo Project Genesis
 			.right
-				-
-					list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
-						{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
-				each item in list
-					a(href="##{item.link}" class="#{item.class}")= item.i
+				.container
+					-
+						list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
+							{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
+					each item in list
+						a(href="##{item.link}" class="#{item.class}")= item.i
 				.menu.defualt
 					.menu-bar
 					.menu-bar

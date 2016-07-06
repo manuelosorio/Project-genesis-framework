@@ -445,13 +445,45 @@ a.row .col .col + .col {
   position: relative;
   right: 5%;
 }
-.nav.defualt .right a {
-  display: none;
+.nav.defualt .right .container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  position: fixed;
+  top: -65px;
+  height: 100vh;
+  width: 150px;
+  background: #161616;
+  right: -150px;
+  transition: 250ms ease-in-out;
+  padding-bottom: 250px;
+}
+.nav.defualt .right .container.active {
+  right: 0px;
+}
+.nav.defualt .right .container a {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  margin-top: 25px;
   color: #E2E2E2;
   transition: 300ms ease-in-out;
 }
-.nav.defualt .right a:hover {
+.nav.defualt .right .container a:hover {
   color: #a2a2a2;
+}
+.nav.defualt .right .menu {
+  transition: 250ms ease-in-out;
+  right: inherit;
+}
+.nav.defualt .right .menu.active {
+  right: 150px;
 }
 
 @media screen and (min-width: 700px) {
@@ -477,8 +509,20 @@ a.row .col .col + .col {
   .nav.defualt .right .menu {
     display: none;
   }
-  .nav.defualt .right a {
-    display: initial;
+  .nav.defualt .right .container {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-flow: row;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    position: relative;
+    height: auto;
+    width: auto;
+    background: transparent;
+  }
+  .nav.defualt .right .container a {
+    margin: 0;
     padding-left: 25px;
   }
 }

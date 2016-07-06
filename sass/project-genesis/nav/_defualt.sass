@@ -18,12 +18,40 @@
 	.right
 		position: relative
 		right: 5%
-		a
-			display: none
-			color: $silver
-			transition: 300ms ease-in-out
-			&:hover
-				color: darken($silver, 25%)
+		.container
+			display: flex
+			justify-content: space-around
+			flex-flow: column
+			// align-content: center
+			position: fixed
+			top: -65px
+			height: 100vh
+			width: 150px
+			background: $black
+			right: -150px
+			transition: 250ms ease-in-out
+			padding-bottom: 250px
+			// z-index: 1
+			&.active
+				right: 0px
+			// top:
+			a
+				align-self: center
+				margin:
+					top: 25px
+					// left: 25px
+					// bottom: 15px
+				// display: none
+				color: $silver
+				transition: 300ms ease-in-out
+				&:hover
+					color: darken($silver, 25%)
+		.menu
+			transition: 250ms ease-in-out
+			right: inherit
+			&.active
+				right: 150px
+				// transform: translate(-150px,0)
 @media screen and (min-width:700px)
 	.nav.defualt
 		height: 50px
@@ -38,9 +66,16 @@
 			right: 15%
 			.menu
 				display: none
-			a
-				display: initial
-				padding:
-					left: 25px
+			.container
+				justify-content: space-around
+				flex-flow: row
+				position: relative
+				height: auto
+				width: auto
+				background: transparent
+				a
+					margin: 0
+					padding:
+						left: 25px
 				// transform: translate(0, -30px)
 // cubic-bezier(0.68, 0.26, 0.46, 2.36)
