@@ -5,7 +5,7 @@
 	background: $black
 	justify-content: space-between
 	flex-flow: wrap
-	transition: 500ms ease
+	transition: 250ms ease
 	.left
 		flex-flow: row
 		justify-content: flex-start
@@ -24,14 +24,13 @@
 			flex-flow: column
 			// align-content: center
 			position: fixed
-			top: -65px
+			// top: -65px
 			height: 100vh
 			width: 150px
 			background: $black
 			right: -150px
 			transition: 250ms ease-in-out
 			padding-bottom: 250px
-			// z-index: 1
 			&.active
 				right: 0px
 			// top:
@@ -46,16 +45,16 @@
 				transition: 300ms ease-in-out
 				&:hover
 					color: darken($silver, 25%)
-		.menu
-			transition: 250ms ease-in-out
-			right: inherit
-			&.active
-				right: 150px
 				// transform: translate(-150px,0)
+.page-content
+	position: relative
+	transition: 250ms ease-in-out
+	right: initial
+	&.active
+		transform: translateX(-150px)
 @media screen and (min-width:700px)
 	.nav.defualt
 		height: 50px
-		background: $fuchsia
 		.left
 			left: 15%
 			logo
@@ -67,6 +66,7 @@
 			.menu
 				display: none
 			.container
+				display: initial
 				justify-content: space-around
 				flex-flow: row
 				position: relative
@@ -79,3 +79,4 @@
 						left: 25px
 				// transform: translate(0, -30px)
 // cubic-bezier(0.68, 0.26, 0.46, 2.36)
+body
