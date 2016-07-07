@@ -33,6 +33,7 @@
 			padding-bottom: 250px
 			&.active
 				right: 0px
+				position: fixed
 			// top:
 			a
 				align-self: center
@@ -46,12 +47,6 @@
 				&:hover
 					color: darken($silver, 25%)
 				// transform: translate(-150px,0)
-.page-content
-	position: relative
-	transition: 250ms ease-in-out
-	right: initial
-	&.active
-		transform: translateX(-150px)
 @media screen and (min-width:700px)
 	.nav.defualt
 		height: 50px

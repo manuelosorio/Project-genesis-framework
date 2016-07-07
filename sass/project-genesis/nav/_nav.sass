@@ -1,6 +1,13 @@
 .nav
 	display: flex
 	align-content: center
+.page-content
+	// position: relative
+	transition: 250ms ease-in-out
+	// right: 0
+	&.active
+		transform: translateX(-150px)
+		// right: 150
 @import 'defualt'
 @import 'sidebar'
 @import 'fixed'
