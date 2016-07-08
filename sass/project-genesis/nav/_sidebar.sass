@@ -34,7 +34,7 @@
 		.menu-bar
 			transition: 250ms ease-in-out
 			/* offset-x | offset-y | blur-radius | spread-radius | color */
-			box-shadow: 0 0 2px 1.5px rgba($yellow, .45)
+			box-shadow: 0 0 2px 1.5px rgba($purple, .5)
 		&.active > .menu-bar
 			box-shadow: 0 0 2px 1.5px rgba($lime, 0)
 .nav.sidebar.left .menu
@@ -45,5 +45,5 @@
 	right: 10px
 	&.active
 		right: 260px
-body
-	height: 100rem
+.nav.right.active ~ .page-content
+	transform: translate(-250px, 0)
