@@ -9,7 +9,8 @@ html
 		script(src="assets/js/project-genesis.js")
 		title Project Genesis - Nav
 	body
-		.nav.defualt
+		mark
+		.nav.defualt.hide
 			.left
 				.logo Project Genesis
 			.right
@@ -23,51 +24,34 @@ html
 					.menu-bar
 					.menu-bar
 					.menu-bar
+	
 
-		.row.hide
-			.col.col-12
-				.nav.defualt.fixed
-					.left
-						.logo Project Genesis
-					.right
-						-
-							list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
-								{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
-						each item in list
-							a(href="##{item.link}" class="#{item.class}")= item.i
-						.menu
-							.icon
-							
-		.row.hide
-			.col.col-12
-				.nav.sidebar
-					.left
-						.logo Project Genesis
-					.right
-						-
-							list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
-								{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
-						each item in list
-							a(href="##{item.link}" class="#{item.class}")= item.i
-						.menu
-							.icon
+		.nav.defualt.fixed.hide
+			.left
+				.logo Project Genesis
+			.right
+				-
+					list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
+						{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
+				each item in list
+					a(href="##{item.link}" class="#{item.class}")= item.i
+				.menu
+					.icon
+		
+		
+		.nav.sidebar.left
+			.logo Project Genesis
+			.menu.left-arrow
+				.menu-bar
+				.menu-bar
+				.menu-bar
+			.container
+				-
+					list = [ { link: '/flexbox-grid.html', i: 'Flex Box Grid' }, { link: '/colors.html', i: 'Colors' }, { link: '#3', i: 'Item 3' },
+						{ link: '#4', i: 'Item 4' }, { link: '#5', i: 'Item 5', class: 'cta' } ]
+				each item in list
+					a(href="#{item.link}" class="#{item.class}")= item.i
 
-
-		//- .nav.sidebar
-		//- .left
-		//- 	.logo Project Genesis
-		//- .right
-		//- 	a(href="#") Item 1
-		//- 	a(href="#") Item 2
-		//- 	a(href="#") Item 3
-		//- 	a(href="#") Item 4
-		//- 	a(href="#").cta Item 5	
-		//- .nav.fixed
-		//- 	.left
-		//- 		.logo Project Genesis
-		//- 	.right
-		//- 		a(href="#") Item 1
-		//- 		a(href="#") Item 2
-		//- 		a(href="#") Item 3
-		//- 		a(href="#") Item 4
-		//- 		a(href="#").cta Item 5
+		.page-content
+			.row
+				.col.col-8

@@ -5,7 +5,19 @@ $(document).ready(function () {
 	  $(this).toggleClass('active');
 		$('.container').toggleClass('active');
 		$('.page-content').toggleClass('active');
+		$('.sidebar').toggleClass('active');
 	});
+	// $('body').on('click', function(){
+	// 	if ( $('.sidebar').hasClass('active') ) {
+	// 		$(this).removeClass('active');
+	// 		$('.menu').removeClass('active');
+	// 	}
+	// });
+	// $('body').on('click', function(){
+	// 	if ( $('.menu').hasClass('active') ) {
+	// 		$(this).removeClass('active');
+	// 	}
+	// });
 });
 
 
