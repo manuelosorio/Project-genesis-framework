@@ -1,0 +1,21 @@
+.menu
+	position: relative
+	// overflow: hidden
+	width: 30px
+	height: 30px
+	cursor: pointer
+	transition: 250ms ease-in-out
+
+	&:hover .menu-bar
+		// background: darken($silver, 25%)
+	.menu-bar
+		height: 5px
+		transition: 250ms ease-in-out
+		border-radius: 3px
+		background: $silver
+		margin-bottom: 5px
+	&:focus
+		outline: none
+@import 'defualt'
+@import 'left-arrow'
+@import 'right-arrow'

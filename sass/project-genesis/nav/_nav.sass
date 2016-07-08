@@ -1,0 +1,24 @@
+.nav
+	display: flex
+	align-content: center
+	a
+		align-self: center
+		color: $silver
+		transition: 300ms ease-in-out
+		&:hover
+			color: darken($silver, 25%)
+.page-content
+	// position: relative
+	transition: 250ms ease-in-out
+	// right: 0
+	&.active
+		transform: translateX(-150px)
+.logo
+	color: $silver
+	font-size: 20px
+	font-family: sans-serif
+		// right: 150
+@import 'defualt'
+@import 'sidebar'
+@import 'fixed'
+@import 'menu/menu'
