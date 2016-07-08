@@ -59,10 +59,9 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
 # Windows shortcuts
 *.lnk
-
+*.bat
 *.cfg
 /.sass-cache/*
 
@@ -71,3 +70,6 @@ $RECYCLE.BIN/
 *.css.map
 *.ai
 _files/
+colors.png
+dasdfgfsr5r4ra.mp4
+Intro-StormofColorRunfixed.mp4

@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maxium-scale=1, user-scalable=no')
+		link(rel='stylesheet', href='assets/css/project-genesis.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js')
+		script(src='assets/js/project-genesis.js')
+		title Reponsive Grid Test
+	body
+		.nav.defualt
+			.left
+				.logo Project Genesis
+			.right
+				.container
+					a.undefined(href='/flexbox-grid.html') Flex Box Grid
+					a.undefined(href='/colors.html') Colors
+					a.undefined(href='#3') Item 3
+					a.undefined(href='#4') Item 4
+					a.cta(href='#5') Item 5
+				.menu.defualt
+					.menu-bar
+					.menu-bar
+					.menu-bar
+		
+		
+		
+		.page-content
+			h1(style='text-align:center;') Project Genesis - Flexbox Grid
+			.row(style='justify-content: center; display: flex;')
+				.col.col-3
+					h2 Usage:
+				ul.col.col-8
+					li.col.col-4 Follow normal grid naming conventions
+					li.col.col-4
+						| Add an extension if you want to move a column to another spot with an extension of 'col-order-{Column spot #}
+			.row
+				.box.col.col-5.col-order-2
+					| .col .col-5 .col-order-2
+				.box.col.col-3.col-order-3
+					| .col .col-3.col-order-3
+				.box.col.col-4.col-order-1
+					| .col .col-4.col-order-1
+			.row
+				.box.col.col-8
+					| .col-8
+				.box.col.col-4
+					| .col-4
+			.row
+				.box.col.col-9
+					| .col-9
+				.box.col.col-3
+					| .col-8=3
+			.row
+				.box.col.col-10
+					| .col-10
+				.box.col.col-2
+					| .col-2
