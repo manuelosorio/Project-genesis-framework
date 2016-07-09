@@ -1,0 +1,67 @@
+.flexcontainer
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: flex-start
+.cbox
+	align-items: center
+	display: flex
+	height: 100px
+	justify-content: center
+	text-align: center
+	width: 25%
+	&:nth-child(1)
+		background-color: $navy
+		color: lighten($navy, 25%)
+	&:nth-child(2)
+		background-color: $blue
+		color: darken($blue, 25%)
+	&:nth-child(3)
+		background-color: $aqua
+		color: darken($aqua, 25%)
+	&:nth-child(4)
+		background-color: $teal
+		color: darken($teal, 25%)
+	&:nth-child(5)
+		background-color: $olive
+		color: lighten($olive, 25%)
+	&:nth-child(6)
+		background-color: $green
+		color: lighten($green, 25%)
+	&:nth-child(7)
+		background-color: $lime
+		color: darken($lime, 25%)
+	&:nth-child(8)
+		background-color: $yellow
+		color: darken($yellow, 25%)
+	&:nth-child(9)
+		background-color: $orange
+		color: lighten($orange, 25%)
+	&:nth-child(10)
+		background-color: $red
+		color: darken($red, 25%)
+	&:nth-child(11)
+		background-color: $maroon
+		color: lighten($maroon, 25%)
+	&:nth-child(12)
+		background-color: $fuchsia
+		color: darken($fuchsia, 25%)
+	&:nth-child(13	)
+		background-color: $purple
+		color: lighten($purple, 25%)
+	&:nth-child(1	4)
+		background-color: $silver
+		color: darken($silver, 25%)
+	&:nth-child(	15)
+		background-color: $grey
+		color: lighten($grey, 25%)
+	&:nth-child(	16)
+		background-color: $black
+		color: lighten($black, 25%)
+
+.box
+	background: $aqua
+	padding: 10px 10px
+@media screen and (max-width:700px)
+	.cbox
+		width: 100%
