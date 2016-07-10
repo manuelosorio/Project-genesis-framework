@@ -61,11 +61,11 @@ i {
 }
 
 .pg-max-vol:before {
-  content: "";
+  content: "";
 }
 
 .pg-leave-fullscrn:before {
-  content: "";
+  content: "";
 }
 
 .pg-min-vol:before {
@@ -196,20 +196,28 @@ i {
 }
 
 .hero {
-  background: url(https://images.unsplash.com/photo-1417733403748-83bbc7c05140?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat left center;
+  background: url(https://images.unsplash.com/photo-1417733403748-83bbc7c05140?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat center;
   background-size: cover;
   background-color: rgba(22, 22, 22, 0.45);
   background-blend-mode: darken;
+  display: flex;
   width: 100%;
   height: 250px;
   justify-content: center;
   align-content: center;
 }
 
-.hero h1 {
-  color: white;
+.hero-container {
   align-self: center;
+}
+
+.hero-container h1 {
+  color: white;
   text-align: center;
+}
+
+.hero-container h1 button {
+  appearance: none;
 }
 
 .about {
@@ -217,14 +225,43 @@ i {
   background: transparent;
 }
 
-.about img {
+.about .info {
+  font-size: 20px;
+  margin-top: -30px;
+}
+
+.about .info-icon {
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  background: #161616;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.about .info-icon img {
+  margin: auto 0;
+  width: 100px;
+  height: auto;
 }
 
 @media screen and (min-width: 700px) {
   .hero {
+    background: url(https://images.unsplash.com/photo-1417733403748-83bbc7c05140?ixlib=rb-0.3.5&q=80&fm=jpg) no-repeat left center fixed;
+    background-size: cover;
+    background-color: rgba(22, 22, 22, 0.45);
+    background-blend-mode: darken;
     height: 350px;
   }
+  .hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+  }
+}
+
+body {
+  background-color: #E2E2E2;
 }
