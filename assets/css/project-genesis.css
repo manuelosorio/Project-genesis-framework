@@ -349,7 +349,7 @@ a {
     margin-left: 0;
   }
   .row .col-1 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-1 {
@@ -358,7 +358,7 @@ a {
             order: 1;
   }
   .row .col-2 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-2 {
@@ -367,7 +367,7 @@ a {
             order: 2;
   }
   .row .col-3 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-3 {
@@ -376,7 +376,7 @@ a {
             order: 3;
   }
   .row .col-4 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-4 {
@@ -385,7 +385,7 @@ a {
             order: 4;
   }
   .row .col-5 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-5 {
@@ -394,7 +394,7 @@ a {
             order: 5;
   }
   .row .col-6 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-6 {
@@ -403,7 +403,7 @@ a {
             order: 6;
   }
   .row .col-7 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-7 {
@@ -412,7 +412,7 @@ a {
             order: 7;
   }
   .row .col-8 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-8 {
@@ -421,7 +421,7 @@ a {
             order: 8;
   }
   .row .col-9 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-9 {
@@ -430,7 +430,7 @@ a {
             order: 9;
   }
   .row .col-10 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-10 {
@@ -439,7 +439,7 @@ a {
             order: 10;
   }
   .row .col-11 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-11 {
@@ -448,7 +448,7 @@ a {
             order: 11;
   }
   .row .col-12 {
-    width: 94%;
+    width: 100%;
     margin-top: 20px;
   }
   .row .col.col-order-12 {
@@ -474,6 +474,7 @@ a {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
+  z-index: 15;
 }
 .nav a {
   -webkit-align-self: center;
@@ -484,10 +485,6 @@ a {
 }
 .nav a:hover {
   color: #a2a2a2;
-}
-
-.page-content {
-  transition: 250ms ease-in-out;
 }
 
 .logo {
@@ -546,26 +543,19 @@ a {
 }
 .nav.default .right .container.active {
   right: 0px;
-  position: fixed;
 }
 
 @media screen and (min-width: 700px) {
   .nav.default {
     height: 50px;
   }
-  .nav.default .left {
-    left: 15%;
-  }
-  .nav.default .left logo {
-    font-size: 25px;
+  .nav.default .left .logo {
+    font-size: 24px;
   }
   .nav.default .right {
     -webkit-flex-flow: row;
         -ms-flex-flow: row;
             flex-flow: row;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     right: 15%;
   }
   .nav.default .right .menu {
