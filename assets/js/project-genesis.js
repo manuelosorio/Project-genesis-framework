@@ -1,8 +1,30 @@
 /*global $, playPause, vidSeek, updateSeekTime, vidMute, setVolume, toggleFullscreen, keyControl */
 // "use strict";
-$(document).ready(function () {
+$(function() {
+    smoothScroll(300);
+    nav();
+		intializePlayer();
+});
+
+//smoothScroll is applied from the document ready function
+function smoothScroll (duration) {
+$('a[href^="#"]').on('click', function(event) {
+
+	 var target = $( $(this).attr('href') );
+
+	 if( target.length ) {
+			 event.preventDefault();
+			 $('html, body').animate({
+					 scrollTop: target.offset().top
+			 }, duration);
+	 }
+});
+
+}
+
+function nav(){
 	$('.menu').on('click', function(){
-	  $(this).toggleClass('active');
+		$(this).toggleClass('active');
 		$('.container').toggleClass('active');
 		$('.page-content').toggleClass('active');
 		$('.sidebar').toggleClass('active');
@@ -18,7 +40,7 @@ $(document).ready(function () {
 	// 		$(this).removeClass('active');
 	// 	}
 	// });
-});
+}
 
 
 var vid, playbtn, seekSlider, cTimeText, dTimeText, mutebtn, volumeSlider, fullscreenbtn, player, fullscreen;
@@ -46,7 +68,7 @@ function intializePlayer() {
 	window.addEventListener("keydown", keyControl, false);
 }
 
-window.onload = intializePlayer;
+// window.onload = intializePlayer;
 
 function playPause() {
 	'use strict';

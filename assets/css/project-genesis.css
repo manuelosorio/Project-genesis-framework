@@ -82,6 +82,10 @@ i {
   content: "";
 }
 
+.pg-double-down-arrow:before {
+  content: "";
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: "Fira Sans", sans-serif;
@@ -138,8 +142,8 @@ h1 {
 }
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: #F4EE1C;
+  color: #161616;
 }
 
 small {
