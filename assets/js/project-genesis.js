@@ -145,7 +145,7 @@ function vidMute() {
 		if (volumeSlider.value >= 61 && volumeSlider.value <= 100) {
 			mutebtn.innerHTML = '<i class="pg-max-vol"></i>';
 		} else if (volumeSlider.value >= 36 && volumeSlider.value <= 60) {
-			mutebtn.innerHTML = '<i class="pg-med-vol"></i>';
+			mutebtn.innerHTML = '<i class="pg-max-vol"></i>';
 		} else if (volumeSlider.value >= 1 && volumeSlider.value <= 35) {
 			mutebtn.innerHTML = '<i class="pg-min-vol"></i>';
 		} else if (volumeSlider.value <= 0 && volumeSlider.value >= 0) {
@@ -196,15 +196,17 @@ function toggleFullscreen() {
 		} else if (player.msRequestFullscreen) {
 			player.msRequestFullscreen();
 		}
-
 		fullscreenbtn.innerHTML = '<i class="pg-leave-fullscrn"></i>';
 		fullscreen = true;
 	} else {
 		if (document.exitFullscreen) {
+      fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
 			document.exitFullscreen();
 		} else if (document.mozCancelFullScreen) {
+      fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
 			document.mozCancelFullScreen();
 		} else if (document.webkitExitFullscreen) {
+      fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
 			document.webkitExitFullscreen();
 		}
 
