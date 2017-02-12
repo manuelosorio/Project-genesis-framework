@@ -656,7 +656,6 @@ a {
 .nav.sidebar .menu .menu-bar {
   transition: 250ms ease-in-out;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0 0 2px 1.5px rgba(84, 17, 86, 0.5);
 }
 .nav.sidebar .menu.active > .menu-bar {
   box-shadow: 0 0 2px 1.5px rgba(51, 204, 51, 0);
