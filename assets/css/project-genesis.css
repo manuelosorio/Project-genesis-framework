@@ -708,13 +708,13 @@ a {
   transition: 250ms ease-in-out;
 }
 .menu:hover .menu-bar {
-  background: #a2a2a2;
+  background: #20afab;
 }
 .menu .menu-bar {
   height: 5px;
   transition: 250ms ease-in-out;
   border-radius: 3px;
-  background: #E2E2E2;
+  background: #2AD8D3;
   margin-bottom: 5px;
 }
 .menu:focus {
