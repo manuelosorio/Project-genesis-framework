@@ -1,0 +1,51 @@
+
+@function btn-color($color)
+  @if map-has-key($buttonColors, $color)
+    @return map-get($buttonColors, $color)
+  @warn "Unknown `#{$color}` in $buttonColors."
+  @return null
+
+
+@function btn-size($size)
+  @if map-has-key($buttonSizes, $size)
+    @return map-get($buttonSizes, $size)
+  @warn "Unknown `#{$size}` in $buttonSizes."
+  @return null
+
+.btn
+  font: $family
+  text-align: center
+  background: rgba($aqua, .9999999)
+  color: rgba(darken($aqua, 25%), .9999999)
+  text-decoration: none
+  padding: .25em .35em
+  display: inline-block
+  transition: 300ms ease
+  max-width: 250px
+  &:hover
+    background: rgba(darken($aqua, 25%), .9999999)
+    color:  rgba($aqua, .9999999)
+  &.round
+    border-radius: 8px
+  @each $button-color, $colors in $buttonColors
+    // TODO: add hover animation to make button look likes its being interacted with
+    &.#{$button-color}
+      background: rgba(btn-color($button-color), .9999999)
+      color: rgba(lighten(btn-color($button-color), 25%), .9999999)
+      &:hover
+        background: rgba(darken(btn-color($button-color), 25%), .9999999)
+        color:  rgba(btn-color($button-color), .9999999)
+
+    &.outline.#{$button-color}
+      background-color: transparent
+      border:
+        color: rgba(btn-color($button-color), .9999999)
+        style: solid
+      color:  rgba(btn-color($button-color), .9999999)
+      &:hover
+        background: rgba(btn-color($button-color), .9999999)
+        color: rgba(lighten(btn-color($button-color), 25%), .9999999)
+
+  @each $button-size, $sizes in $buttonSizes
+    &.#{$button-size}
+      font-size: btn-size($button-size)
