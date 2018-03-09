@@ -1,0 +1,56 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" )
+		link(rel="stylesheet" href="assets/css/project-genesis.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js")
+		script(src="assets/js/project-genesis.js")
+		title Project Genesis - Nav
+	body
+		.nav.default
+			.left
+				.logo Project Genesis
+			.right
+				.container
+					-
+						list = [ { link: '/flexbox-grid.html', i: 'Flex Box Grid' }, { link: '/colors.html', i: 'Colors' }, { link: '#3', i: 'Item 3' },
+							{ link: '#4', i: 'Item 4' }, { link: '#5', i: 'Item 5', class: 'cta' } ]
+					each item in list
+						a(href="#{item.link}" class="#{item.class}")= item.i
+				.menu.default
+					.menu-bar
+					.menu-bar
+					.menu-bar
+	
+
+		.nav.default.fixed.hide
+			.left
+				.logo Project Genesis
+			.right
+				-
+					list = [ { link: '1', i: 'Item 1' }, { link: '2', i: 'Item 2' }, { link: '3', i: 'Item 3' },
+						{ link: '4', i: 'Item 4' }, { link: '5', i: 'Item 5', class: 'cta' } ]
+				each item in list
+					a(href="##{item.link}" class="#{item.class}")= item.i
+				.menu
+					.icon
+		
+		
+		.nav.sidebar.left.hide
+			.logo Project Genesis
+			.menu.left-arrow
+				.menu-bar
+				.menu-bar
+				.menu-bar
+			.container
+				-
+					list = [ { link: '/flexbox-grid.html', i: 'Flex Box Grid' }, { link: '/colors.html', i: 'Colors' }, { link: '#3', i: 'Item 3' },
+						{ link: '#4', i: 'Item 4' }, { link: '#5', i: 'Item 5', class: 'cta' } ]
+				each item in list
+					a(href="#{item.link}" class="#{item.class}")= item.i
+
+		.page-content
+			.row
+				.col.col-8
