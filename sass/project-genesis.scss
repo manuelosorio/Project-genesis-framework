@@ -1,0 +1,21 @@
+/**
+  * Project Genesis by Manuel Osorio
+  * manuelosorio.me/project-genesis
+  * MIT License
+*/
+
+/**
+
+  ------------------------------------------------------------------
+    PROJECT GENESIS, A CSS framework. Starting Point for projects
+  ------------------------------------------------------------------
+
+*/
+
+@import 'normalize';
+// Root of All SASS files for Project Genesis
+@import 'settings';
+@import 'project-genesis/imports';
+.hide{
+  display: none;
+}
