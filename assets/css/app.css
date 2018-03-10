@@ -316,9 +316,7 @@ i {
         transform: scale(1.35); } }
 
 body {
-  background-color: #E2E2E2;
-  height: 2500px;
-  overflow-x: hidden; }
+  background-color: #E2E2E2; }
 
 .about {
   text-align: center;

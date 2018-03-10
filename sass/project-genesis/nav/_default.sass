@@ -1,56 +1,56 @@
 .nav.default
-	width: 100%
-	height: 40px
-	align-items: center
-	background: $black
-	justify-content: space-between
-	flex-flow: wrap
-	transition: 250ms ease
-	.left
-		flex-flow: row
-		justify-content: flex-start
-		position: relative
-		left: 5%
-	.right
-		position: relative
-		right: 5%
-		.container
-			display: flex
-			justify-content: space-around
-			flex-flow: column
-			position: fixed
-			height: 100vh
-			width: 150px
-			background: $black
-			right: -150px
-			transition: 250ms ease-in-out
-			padding-bottom: 250px
-			&.active
-				right: 0px
-				// position: fixed
-@media screen and (min-width:700px)
-	.nav.default
-		height: 50px
-		.left .logo
-			font-size: $size-l
-		.right
-			flex-flow: row
-			// justify-content: flex-end
-			right: 15%
-			.menu
-				display: none
-			.container
-				display: initial
-				justify-content: space-around
-				flex-flow: row
-				position: relative
-				height: auto
-				width: auto
-				background: transparent
-				a
-					margin: 0
-					padding:
-						left: 25px
+  width: 100%
+  height: 40px
+  align-items: center
+  background: $black
+  justify-content: space-between
+  flex-flow: wrap
+  transition: 250ms ease
+  .left
+    flex-flow: row
+    justify-content: flex-start
+    position: relative
+    left: 5%
+  .right
+    position: relative
+    right: 5%
+    .container
+      display: flex
+      justify-content: space-around
+      flex-flow: column
+      position: fixed
+      height: 100vh
+      width: 150px
+      background: $black
+      right: -150px
+      transition: $transition
+      padding-bottom: 250px
+      &.active
+        right: 0px
+        // position: fixed
+@media screen and (min-width: $medium)
+  .nav.default
+    height: 50px
+    .left .logo
+      font-size: $size-m
+    .right
+      flex-flow: row
+      // justify-content: flex-end
+      right: 15%
+      .menu
+        display: none
+      .container
+        display: initial
+        justify-content: space-around
+        flex-flow: row
+        position: relative
+        height: auto
+        width: auto
+        background: transparent
+        a
+          margin: 0
+          padding:
+            left: 25px
 
 
 // cubic-bezier(0.68, 0.26, 0.46, 2.36)

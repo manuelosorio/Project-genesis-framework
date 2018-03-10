@@ -5,24 +5,24 @@
 /* Begin Global Menu Styles */
 
 .menu
-	position: relative
-	// overflow: hidden
+  position: relative
+  // overflow: hidden
 
-	width: 30px
-	height: 30px
-	cursor: pointer
-	transition: 250ms ease-in-out
+  width: 30px
+  height: 30px
+  cursor: pointer
+  transition: $transition
 
-	&:hover .menu-bar
-		background: darken($aqua, 10%)
-	.menu-bar
-		height: 5px
-		transition: 250ms ease-in-out
-		border-radius: 3px
-		background: $aqua
-		margin-bottom: 5px
-	&:focus
-		outline: none
+  .menu-bar
+    height: 5px
+    transition: $transition
+    // border-radius: 3px
+    background: $aqua
+    margin-bottom: 5px
+  &:hover .menu-bar
+    background: darken($aqua, 10%)
+  &:focus
+    outline: none
 /* Begin default Styles */
 /* Becomes a 'X' */
 @import 'default'

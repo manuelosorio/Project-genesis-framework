@@ -11,20 +11,20 @@ html
   body
     .nav.default
       .left
-        .logo.txt-teal Project Genesis
+        .logo Project Genesis
       .right
         .container
-          - list = [{ link: '/flexbox-grid.html', i: 'Flex Box Grid' }, { link: '/colors.html', i: 'Colors' }, { link: '#3', i: 'Item 3' }, { link: '#4', i: 'Item 4' }, { link: '#5', i: 'Item 5', class: 'cta' }]
+          - list = [{ link: '/flexbox-grid.html', i: 'Flex Box Grid' }, { link: '/colors.html', i: 'Colors' }, { link: '#3', i: 'Item 3' }, { link: '#4', i: 'Item 4' }]
           each item in list
             a(href=item.link class=item.class) #{item.i}
             |
             |
           
-          .menu.right-arrow
-            .menu-bar
-            .menu-bar
-            .menu-bar
-
-  .btn.defualt.small This is a button
-  .btn.danger.medium This is a button
-  .btn.success.large This is a button
+        .menu.default
+          .menu-bar
+          .menu-bar
+          .menu-bar
+    .page-content
+      .btn.defualt.small This is a button
+      .btn.danger.medium This is a button
+      .btn.success.large This is a button

@@ -460,7 +460,7 @@ html {
   text-decoration: none;
   padding: .25em .35em;
   display: inline-block;
-  transition: 300ms ease;
+  transition: 300ms ease-in-out;
   max-width: 250px;
 }
 
@@ -861,7 +861,7 @@ html {
 /* Begin Nav Styles */
 /*	Requires to have the class of nav followed
 	the by class of default (give class of fixed to make the nav position fixed) or
-	 the class of sidebar (doesn't need class of fix becuase the menu icon is already possiion: fixed)
+	 the class of sidebar (doesn't need class of fix becuase the menu icon is already position: fixed)
 	*/
 /* Nav is Mobile first */
 .nav {
@@ -893,7 +893,7 @@ html {
 .logo {
   color: #E2E2E2;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 
 /* Begin Default Nav Styles */
@@ -928,7 +928,7 @@ html {
   width: 150px;
   background: #161616;
   right: -150px;
-  transition: 250ms ease-in-out;
+  transition: 300ms ease-in-out;
   padding-bottom: 250px;
 }
 
@@ -936,12 +936,12 @@ html {
   right: 0px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
   .nav.default {
     height: 50px;
   }
   .nav.default .left .logo {
-    font-size: 24px;
+    font-size: 16px;
   }
   .nav.default .right {
     flex-flow: row;
@@ -976,7 +976,7 @@ html {
   bottom: 0;
   background: #161616;
   position: fixed;
-  transition: 250ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .nav.sidebar.left {
@@ -996,7 +996,7 @@ html {
 }
 
 .nav.sidebar .logo {
-  margin: 25px auto;
+  margin: 15px auto;
 }
 
 .nav.sidebar .container {
@@ -1031,7 +1031,7 @@ html {
 }
 
 .nav.sidebar.left .menu.active {
-  left: 260px;
+  left: 250px;
 }
 
 .nav.sidebar.right .menu {
@@ -1039,7 +1039,7 @@ html {
 }
 
 .nav.sidebar.right .menu.active {
-  right: 260px;
+  right: 120px;
 }
 
 .nav.right.active ~ .page-content {
@@ -1070,19 +1070,18 @@ html {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: 250ms ease-in-out;
-}
-
-.menu:hover .menu-bar {
-  background: #20afab;
+  transition: 300ms ease-in-out;
 }
 
 .menu .menu-bar {
   height: 5px;
-  transition: 250ms ease-in-out;
-  border-radius: 3px;
+  transition: 300ms ease-in-out;
   background: #2AD8D3;
   margin-bottom: 5px;
+}
+
+.menu:hover .menu-bar {
+  background: #20afab;
 }
 
 .menu:focus {
@@ -1092,7 +1091,7 @@ html {
 /* Begin default Styles */
 /* Becomes a 'X' */
 .menu.default.active {
-  transform: rotate(90deg);
+  transform: translateX(-95px) rotate(90deg);
 }
 
 .menu.default.active .menu-bar:first-child {
@@ -1111,7 +1110,7 @@ html {
 /* End default Styles */
 /* Begin Left Arrow Styles */
 .menu.left-arrow.active {
-  transform: rotate(180deg);
+  transform: translateX(95px) rotate(180deg);
 }
 
 .menu.left-arrow.active .menu-bar:first-child {
@@ -1129,7 +1128,7 @@ html {
 /* End Left Arrow Styles */
 /* Begin Menu Styles */
 .menu.right-arrow.active {
-  transform: rotate(180deg);
+  transform: translateX(-95px) rotate(180deg);
 }
 
 .menu.right-arrow.active .menu-bar:first-child {
