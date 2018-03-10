@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maxium-scale=1, user-scalable=no')
+    link(rel='stylesheet', href='assets/css/project-genesis.css')
+    link(rel='stylesheet', href='assets/css/app.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js')
+    script(src='assets/js/project-genesis.js')
+    title Reponsive Grid
+  body
+    .nav.default
+      .left
+        .logo.txt-teal Project Genesis
+      .right
+        .container
+          - list = [{ link: '/flexbox-grid.html', i: 'Flex Box Grid' }, { link: '/colors.html', i: 'Colors' }, { link: '#3', i: 'Item 3' }, { link: '#4', i: 'Item 4' }, { link: '#5', i: 'Item 5', class: 'cta' }]
+          each item in list
+            a(href=item.link class=item.class) #{item.i}
+            |
+            |
+          
+          .menu.right-arrow
+            .menu-bar
+            .menu-bar
+            .menu-bar
+    .page-content
+      h1(style='text-align:center;') Project Genesis - Flexbox Grid
+      .row(style='justify-content: center; display: flex;')
+        .col.col-3
+          h2 Usage:
+        ul.col.col-8
+          li.col.col-4 Follow normal grid naming conventions
+          li.col.col-4
+            | Add an extension if you want to move a column to another spot with an extension of 'col-order-{Column spot #}
+      .row
+        .box.col.col-5.col-order-2
+          | .col .col-5 .col-order-2
+        .box.col.col-3.col-order-3
+          | .col .col-3.col-order-3
+        .box.col.col-4.col-order-1
+          | .col .col-4.col-order-1
+      .row
+        .box.col.col-8.col-md-6
+          | .col-8
+        .box.col.col-4.col-md-6
+          | .col-4
+      .row
+        .box.col.col-9.col-md-4
+          | .col-9
+        .box.col.col-3.col-md-8
+          | .col-8=3
+      .row
+        .box.col.col-10
+          | .col-10
+        .box.col.col-2
+          | .col-2

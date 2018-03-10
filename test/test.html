@@ -1,0 +1,29 @@
+<pre><code class="lang-html">  &lt;div id=&quot;video_player&quot;&gt;
+    &lt;video id=&quot;video&quot;&gt;
+    &lt;source src=&quot;http://files.simey.me/html5-vids/trailer.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;!-- Safari / iOS, IE9 --&gt;
+
+    &lt;source src=&quot;http://files.simey.me/html5-vids/trailer.webm&quot; type=&quot;video/webm&quot;&gt;
+    &lt;!-- Chrome10+, Ffx4+, Opera10.6+ --&gt;
+
+    &lt;source src=&quot;http://files.simey.me/html5-vids/trailer.ogv&quot; type=&quot;video/ogg&quot;&gt;
+    &lt;!-- Firefox3.6+ / Opera 10.5+ --&gt;
+
+    &lt;div class=&quot;loading&quot;&gt;
+      I have a bad feeling about this... &lt;br&gt;
+      ... your browser doesn&#39;t support the video format!
+    &lt;/div&gt;
+
+    &lt;/video&gt;
+    &lt;div id=&quot;video_controls_bar&quot;&gt;
+      &lt;button id=&quot;playpausebtn&quot;&gt;&lt;i class=&quot;pg-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;input id=&quot;seekslider&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; step=&quot;1&quot;&gt;
+      &lt;span id=&quot;time&quot;&gt;
+        &lt;span id=&quot;cTimeText&quot;&gt;00:00&lt;/span&gt;  / &lt;span id=&quot;dTimeText&quot;&gt;00:00&lt;/span&gt;
+      &lt;/span&gt;
+      &lt;button id=&quot;mutebtn&quot;&gt;&lt;i class=&quot;pg-max-vol&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+      &lt;input id=&quot;volumeSlider&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;100&quot; step=&quot;.05&quot;&gt;
+      &lt;button id=&quot;fullscreenbtn&quot;&gt;&lt;i class=&quot;pg-enter-fullscrn&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
