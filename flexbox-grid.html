@@ -8,25 +8,31 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="assets/js/project-genesis.js"></script>
-    <title>Reponsive Grid Test</title>
+    <title>Reponsive Grid</title>
   </head>
   <body>
-    <div class="nav default fixed">
+    <div class="nav default">
       <div class="left">
-        <div class="logo">Project Genesis</div>
+        <div class="logo txt-teal">Project Genesis</div>
       </div>
       <div class="right">
-        <div class="container"><a href="/flexbox-grid.html" class="undefined">Flex Box Grid</a><a href="/colors.html" class="undefined">Colors</a><a href="#3" class="undefined">Item 3</a><a href="#4" class="undefined">Item 4</a><a href="#5" class="cta">Item 5</a></div>
-        <div class="menu default">
-          <div class="menu-bar"></div>
-          <div class="menu-bar"></div>
-          <div class="menu-bar"></div>
+        <div class="container"><a href="/flexbox-grid.html">Flex Box Grid</a>
+          <a href="/colors.html">Colors</a>
+          <a href="#3">Item 3</a>
+          <a href="#4">Item 4</a>
+          <a class="cta" href="#5">Item 5</a>
+          
+          <div class="menu right-arrow">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+          </div>
         </div>
       </div>
     </div>
     <div class="page-content">
       <h1 style="text-align:center;">Project Genesis - Flexbox Grid</h1>
-      <div style="justify-content: center; display: flex;" class="row">
+      <div class="row" style="justify-content: center; display: flex;">
         <div class="col col-3">
           <h2>Usage:</h2>
         </div>
@@ -41,12 +47,12 @@
         <div class="box col col-4 col-order-1">.col .col-4.col-order-1</div>
       </div>
       <div class="row">
-        <div class="box col col-8">.col-8</div>
-        <div class="box col col-4">.col-4</div>
+        <div class="box col col-8 col-md-6">.col-8</div>
+        <div class="box col col-4 col-md-6">.col-4</div>
       </div>
       <div class="row">
-        <div class="box col col-9">.col-9</div>
-        <div class="box col col-3">.col-8=3</div>
+        <div class="box col col-9 col-md-4">.col-9</div>
+        <div class="box col col-3 col-md-8">.col-8=3</div>
       </div>
       <div class="row">
         <div class="box col col-10">.col-10</div>

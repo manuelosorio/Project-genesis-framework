@@ -1,12 +1,14 @@
 @mixin flexGrid
   @mixin flexGrid($count,$gutter)
   	// calculates single grid item
-  	$oneGridItemWidth: 100 / $count
+  	$gridWidth: 100 / $count
   	//calculates excess margin equally to the column count
-  	$extra: $gutter / $count
+  	$gutterSpace: $gutter / $count
   	.row
   		display: flex
   		overflow: hidden
+      padding: unquote($gutterSpace  + '%')
+      margin: unquote($gutterSpace * $count + '%')
   		.col
   			float: left
   			flex-wrap: nowrap
@@ -15,9 +17,9 @@
   	// The loop that creates all of your grid item classes and widths
   	@for $i from 1 through $count
   		.col-#{$i}
-  			width: unquote(($oneGridItemWidth * $i) - $gutter + ($extra * $i) + '%')
+  			width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')
   	//Flex Grid Breakpoint Styling
-  	@media screen and (max-width:700px)
+  	@media screen and (max-width:$medium)
   		.row
   			flex-direction: column
   			flex-wrap: wrap
@@ -40,5 +42,3 @@
   // body
   	// font-family: sans-serif
   	// padding: 50px
-  .row + .row
-  	margin-top: 20px
