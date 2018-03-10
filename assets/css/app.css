@@ -242,6 +242,8 @@ i {
       color: #E2E2E2;
       font-weight: 300; }
   .hero .cta {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
     font-family: 'Project-Genesis' !important;
     display: -webkit-box;
     display: -ms-flexbox;

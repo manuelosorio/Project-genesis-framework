@@ -440,6 +440,18 @@ i {
   content: "";
 }
 
+.hide {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: "Fira Sans", sans-serif;
+}
+
 .btn {
   font: "Fira Sans", sans-serif;
   text-align: center;
@@ -1299,8 +1311,4 @@ video:-moz-full-screen, audio:-moz-full-screen {
 
 video::-webkit-media-controls-enclosure {
   display: none !important;
-}
-
-.hide {
-  display: none;
 }
