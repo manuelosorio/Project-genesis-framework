@@ -896,7 +896,7 @@ html {
 
 .page-content {
   position: relative;
-  transition: 250ms ease-in-out;
+  transition: 300ms ease-in-out;
   right: 0;
 }
 
@@ -946,8 +946,14 @@ html {
   padding-bottom: 250px;
 }
 
+.nav.default .right .container a {
+  position: relative;
+  top: 25px;
+}
+
 .nav.default .right .container.active {
   right: 0px;
+  top: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1087,6 +1093,10 @@ html {
   transition: 300ms ease-in-out;
 }
 
+.menu.active {
+  position: fixed;
+}
+
 .menu .menu-bar {
   height: 5px;
   transition: 300ms ease-in-out;
@@ -1105,7 +1115,8 @@ html {
 /* Begin default Styles */
 /* Becomes a 'X' */
 .menu.default.active {
-  transform: translateX(-95px) rotate(90deg);
+  transform: translateX(-125px) rotate(90deg);
+  top: 5px;
 }
 
 .menu.default.active .menu-bar:first-child {
