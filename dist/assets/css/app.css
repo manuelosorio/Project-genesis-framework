@@ -346,6 +346,18 @@ body {
 .info-subtext + p {
   margin: 0 10px; }
 
+.footer {
+  background: #161616;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 25px; }
+  .footer p {
+    color: #E2E2E2; }
+  .footer .links a {
+    color: #E2E2E2; }
+    .footer .links a + a {
+      margin-left: 2%; }
+
 /*
 
 Atom One Dark by Daniel Gamage
