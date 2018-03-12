@@ -1,2 +1,38 @@
-<pre><code class="lang-html">
+<pre><code class="lang-css">@mixin noFlexGrid
+  @mixin Grid($count, $gutter)
+    $gridWidth: 100 / $count
+    $gutterSpace: $gutter / $count
+    .row
+      padding: unquote($gutterSpace  + &#39;%&#39;)
+      margin: 20px
+      overflow: hidden
+      &amp;::after
+        content: &quot;&quot;
+        clear: both
+        display: table
+      [class*=&quot;col-&quot;]
+        width: 100%
+      @media screen and (min-width: $small) and (max-width: 480px)
+        .col
+          margin: unquote($gutterSpace * $count + &#39;%&#39;) 0
+        @for $i from 1 through $count
+          .col-sm-#{$i}
+            width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + &#39;%&#39;)
+      @media screen and (min-width: $medium)
+        .col
+          float: left
+          + .col
+            margin-left: unquote($gutter + &#39;%&#39;)
+        @for $i from 1 through $count
+          .col-md-#{$i}
+            width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + &#39;%&#39;)
+      @media screen and (min-width: $large)
+        .col
+          float: left
+          + .col
+            margin-left: unquote($gutter + &#39;%&#39;)
+        @for $i from 1 through $count
+          .col-#{$i}
+            width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + &#39;%&#39;)
+  @include Grid(12, 2)
 </code></pre>

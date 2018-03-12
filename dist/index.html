@@ -10,7 +10,7 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="assets/css/project-genesis.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="assets/js/project-genesis.js"></script>
@@ -22,7 +22,7 @@
         <div class="logo">Project Genesis</div>
       </div>
       <div class="right">
-        <div class="container"><a href="/flexbox-grid.html">Flex Box Grid</a>
+        <div class="container"><a href="#">Grid Systems</a>
           <a href="/colors.html">Colors</a>
           <a href="#3">Item 3</a>
           <a href="#4">Item 4</a>
@@ -104,30 +104,73 @@
                 Project Genesis is currently being worked on and will not be publicly released until most of the features
                 I'm working on are functional. That being said my plans for this framework is to make it easy to understand
                 while being functional, Although I recommend using the sass version of this framework, I'll also provide a
-                css download link. Below Code snippets (On mobile devices you may need to scroll horizontally on the snippets) and a showcase (will add soon) of the features that are ready done will be provide below.
+                css download link.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer">
       <div class="row">
-        <div class="col col-12 col-md-12">
-          <p>Copyright 2016-2018 Manuel Osorio</p>
+        <div class="col col-2 col-md-4"></div>
+        <div class="col col-8 col-md-6"><pre><code class="lang-css">@mixin noFlexGrid
+  @mixin Grid($count, $gutter)
+    $gridWidth: 100 / $count
+    $gutterSpace: $gutter / $count
+    .row
+      padding: unquote($gutterSpace  + &#39;%&#39;)
+      margin: 20px
+      overflow: hidden
+      &amp;::after
+        content: &quot;&quot;
+        clear: both
+        display: table
+      [class*=&quot;col-&quot;]
+        width: 100%
+      @media screen and (min-width: $small) and (max-width: 480px)
+        .col
+          margin: unquote($gutterSpace * $count + &#39;%&#39;) 0
+        @for $i from 1 through $count
+          .col-sm-#{$i}
+            width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + &#39;%&#39;)
+      @media screen and (min-width: $medium)
+        .col
+          float: left
+          + .col
+            margin-left: unquote($gutter + &#39;%&#39;)
+        @for $i from 1 through $count
+          .col-md-#{$i}
+            width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + &#39;%&#39;)
+      @media screen and (min-width: $large)
+        .col
+          float: left
+          + .col
+            margin-left: unquote($gutter + &#39;%&#39;)
+        @for $i from 1 through $count
+          .col-#{$i}
+            width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + &#39;%&#39;)
+  @include Grid(12, 2)
+</code></pre>
+
         </div>
       </div>
-      <div class="row">
-        <div class="col col-4 col-md-4 col-sm-4">
-          <div class="logo">Project Geneis</div>
+      <div class="footer">
+        <div class="row">
+          <div class="col col-12 col-md-12">
+            <p>Copyright 2016-2018 Manuel Osorio</p>
+          </div>
         </div>
-        <div class="col col-4 col-md-4 col-sm-4"></div>
-        <div class="col col-4 col-md-4 col-sm-4">
-          <div class="links"><a href="/flexbox-grid.html">Flex Box Grid</a>
-            <a href="/colors.html">Colors</a>
-            <a href="#3">Item 3</a>
-            <a href="#4">Item 4</a>
-            
+        <div class="row">
+          <div class="col col-4 col-md-4 col-sm-4">
+            <div class="logo">Project Geneis</div>
+          </div>
+          <div class="col col-4 col-md-4 col-sm-4"></div>
+          <div class="col col-4 col-md-4 col-sm-4">
+            <div class="links"><a href="#">Grid Systems</a>
+              <a href="/colors.html">Colors</a>
+              <a href="#3">Item 3</a>
+              <a href="#4">Item 4</a>
+              
+            </div>
           </div>
         </div>
       </div>
