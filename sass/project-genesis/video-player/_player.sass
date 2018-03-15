@@ -1,100 +1,107 @@
 /* Video Player Wrapper
 #video_player
-	width: 100%
-	margin: 0
-	overflow: hidden
-	/* video itself
-	#video
-		width: inherit
-	/* controls
-	#video_controls_bar
-		padding: 10px
-		position: relative
-		display: flex
-		bottom: 60px
-		z-index:  2147483648
-		justify-content: center
-		align-items: center
-		align-content: center
+  width: 100%
+  height: 100%
+  margin: 0
+  overflow: hidden
+  position: relative
+  // margin-bottom: 20px
+  /* video itself
+  #video
+    width: 100%
+    height: 100%
+    background: black
+    /* controls
+  #video_controls_bar
+    padding: 10px
+    position: absolute
+    display: flex
+    bottom: 0
+    left: 0
+    right: 0
+    z-index:  2147483648
+    justify-content: center
+    align-items: center
+    align-content: center
 
-		/* gradient color for video controls
-		background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
-		background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
-		background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
-		/* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 )
-		/* IE6-9 */
+    /* gradient color for video controls
+    // background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
+    // background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
+    // background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
+    // /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 )
+    /* IE6-9 */
 
-		/*	removes defualt styling from button
-		button, input[type=button]
-			-webkit-appearance: none !important
-			border: none !important
-			background: transparent
-
-
-		input[type='range']
-			-webkit-appearance: none !important
-			background: darken($silver, 25%)
-			border: $silver 1px solid
-			height: 4px
-			border-radius: 5px
-
-
-		input[type='range']::-webkit-slider-thumb
-			-webkit-appearance: none !important
-			background: lighten($silver, 25%)
-			height: 15px
-			width: 15px
-			border-radius: 100%
-			cursor: pointer
+    /*  removes defualt styling from button
+    button, input[type=button]
+      -webkit-appearance: none !important
+      border: none !important
+      background: transparent
 
 
-		&:-webkit-full-screen, audio:-webkit-full-screen
-			z-index: 0
-			position: absolute
-			left: 0
-			bottom: 0
-			right: 0
-		// make sure that
-		&:-moz-full-screen, audio:-moz-full-screen
-			z-index: 2147483647
-			position: absolute
-			left: 0
-			bottom: 0
-			right: 0
-		/* Selects all childern ofvideo_controls_bar
-		>  *
-			margin-left: 15px
+    input[type='range']
+      -webkit-appearance: none !important
+      background: darken($silver, 25%)
+      border: $silver 1px solid
+      height: 4px
+      border-radius: 5px
+
+
+    input[type='range']::-webkit-slider-thumb
+      -webkit-appearance: none !important
+      background: lighten($silver, 25%)
+      height: 15px
+      width: 15px
+      border-radius: 100%
+      cursor: pointer
+
+
+    &:-webkit-full-screen, audio:-webkit-full-screen
+      z-index: 0
+      position: absolute
+      left: 0
+      bottom: 0
+      right: 0
+    // make sure that
+    &:-moz-full-screen, audio:-moz-full-screen
+      z-index: 2147483647
+      position: absolute
+      left: 0
+      bottom: 0
+      right: 0
+    /* Selects all childern ofvideo_controls_bar
+    >  *
+      margin-left: 15px
 
 #time
-	color: $silver
-	/* styles icons from control buttons
+  color: $silver
+  /* styles icons from control buttons
 button i
-	transition: 500ms ease
-	color: $silver
-	&.pg-
-		&max-vol, &med-vol, &min-vol, &muted, &enter-fullscrn, &leave-fullscrn
-			font-size: 32px
-			&:hover
-				color: darken($silver, 25%)
-		&play, &pause
-			font-size: 30px
-			&:hover
-				color: darken($silver, 25%)
-		/*	fullscreen styles for chrome
-#video_player:-webkit-full-screen
-	width: 100%
-	height: 100%
-	bottom: 0px
-/*	removes outline when clicking input or button
+  transition: 500ms ease
+  color: $silver
+  &.pg-
+    &max-vol, &med-vol, &min-vol, &muted, &enter-fullscrn, &leave-fullscrn
+      font-size: 32px
+      &:hover
+        color: darken($silver, 25%)
+    &play, &pause
+      font-size: 30px
+      &:hover
+        color: darken($silver, 25%)
+    /*  fullscreen styles for chrome
+#video_player:full-screen #video_controls_bar
+  // bottom: 60px
+
+
+/*  removes outline when clicking input or button
 input:focus, button:focus
-	outline: none
+  outline: none
 
 video:-webkit-full-screen, audio:-webkit-full-screen
-	display: none !important
+  display: none !important
 
 video:-moz-full-screen, audio:-moz-full-screen
-	display: none !important
+  display: none !important
 
 video::-webkit-media-controls-enclosure
-	display: none !important
+  display: none !important
