@@ -224,48 +224,24 @@ function toggleFullscreen() {
     fullscreen = false;
   }
 }
-function setuTimeout(){
-  this.addEventListener("mouseover", restartTimer, false);
-  this.addEventListener("mousedown", restartTimer, false);
-  this.addEventListener("keypress", restartTimer, false);
-  this.addEventListener("touchmove", restartTimer, false);
-  this.addEventListener("MSPointerMove", restartTimer, false);
-  this.addEventListener("mouseover", restartTimer, false);
+var idleTimeID;
+function setupTimeout(){
+  window.addEventListener("mousemove", resetTimer, false);
+  window.addEventListener("mousedown", resetTimer, false);
+  window.addEventListener("keypress", resetTimer, false);
+  window.addEventListener("DOMMouseScroll", resetTimer, false);
+  window.addEventListener("mousewheel", resetTimer, false);
+  window.addEventListener("touchmove", resetTimer, false);
+  window.addEventListener("MSPointerMove", resetTimer, false);
   startTimer();
 }
 function startTimer() {
   idleTimeID = window.setTimeout(goInactive, 3000)
 }
-function restartTimer() {
+function resetTimer() {
   window.clearTimeout(idleTimeID);
   goActive();
 }
-var timeoutID;
-
-function setupTimeout() {
-    var idleTimeID;
-    window.addEventListener("mousemove", resetTimer, false);
-    window.addEventListener("mousedown", resetTimer, false);
-    window.addEventListener("keypress", resetTimer, false);
-    window.addEventListener("DOMMouseScroll", resetTimer, false);
-    window.addEventListener("mousewheel", resetTimer, false);
-    window.addEventListener("touchmove", resetTimer, false);
-    window.addEventListener("MSPointerMove", resetTimer, false);
-
-    startTimer();
-}
-
-function startTimer() {
-    // wait 2 seconds before calling goInactive
-    timeoutID = window.setTimeout(goInactive, 3000);
-}
-
-function resetTimer(e) {
-    window.clearTimeout(timeoutID);
-
-    goActive();
-}
-
 function goInactive() {
   if (fullscreen) {
     hideControls()
