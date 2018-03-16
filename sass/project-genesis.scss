@@ -15,13 +15,13 @@
 // Root of All SASS files for Project Genesis
 @import 'normalize';
 @import 'settings';
-.hide{
-  display: none;
-}
 a {
   text-decoration: none;
 }
 html {
-  font-family: $family
+  font-family: $family;
 }
 @import 'project-genesis/imports';
+.hide{
+  display: none;
+}

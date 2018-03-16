@@ -23,7 +23,13 @@
     justify-content: center
     align-items: center
     align-content: center
-
+    transition: $transition
+    transform-origin: bottom
+    transform: scaleY(1)
+    opacity: 1
+    &.hide-bar
+      transform: scaleY(0)
+      opacity: 0
     /* gradient color for video controls
     // background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)
     // background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%)

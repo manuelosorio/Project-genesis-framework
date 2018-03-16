@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 document.addEventListener('DOMContentLoaded', function () {
     smoothScroll(300);
     nav();
@@ -31,12 +31,13 @@ function nav(){
 }
 
 
-var vid, playbtn, seekSlider, cTimeText, dTimeText, mutebtn, volumeSlider, fullscreenbtn, player, fullscreen;
+var vid, controlBar, playbtn, seekSlider, cTimeText, dTimeText, mutebtn, volumeSlider, fullscreenbtn, player, fullscreen;
 
 function intializePlayer() {
   // Set Object Ref
-  "use strict";
+
   vid = document.getElementById('video');
+  controlBar = document.getElementById('video_controls_bar');
   playbtn = document.getElementById('playpausebtn');
   seekSlider = document.getElementById('seekslider');
   cTimeText = document.getElementById('cTimeText');
@@ -50,6 +51,10 @@ function intializePlayer() {
   playbtn.addEventListener("click", playPause, false);
   seekSlider.addEventListener("input", vidSeek, false);
   vid.addEventListener("timeupdate", updateSeekTime, false);
+  vid.addEventListener("mouseover", showControls);
+  vid.addEventListener("mouseleave", hideControls);
+  controlBar.addEventListener("mouseover", showControls);
+  controlBar.addEventListener("mouseleave", hideControls);
   mutebtn.addEventListener("click", vidMute, false);
   volumeSlider.addEventListener("input", setVolume, false);
   fullscreenbtn.addEventListener("click", toggleFullscreen, false);
@@ -59,7 +64,7 @@ function intializePlayer() {
 // window.onload = intializePlayer;
 
 function playPause() {
-  'use strict';
+
   if (vid.paused) {
     vid.play();
     playbtn.innerHTML = '<i class="pg-pause"></i>';
@@ -74,13 +79,13 @@ function playPause() {
 }
 
 function vidSeek() {
-  'use strict';
+
   var seekTo = vid.duration * (seekSlider.value / 100);
   vid.currentTime = seekTo;
 }
 
 function keyControl(e) {
-  "use strict";
+
   var seekTo;
   switch (e.keyCode) {
   case 27:
@@ -93,7 +98,8 @@ function keyControl(e) {
     break;
 
   case 38:
-
+  seekTo = vid.duration * (seekSlider.value / 100) - 5;
+  vid.currentTime = seekTo;
     break;
 
   case 39:
@@ -107,9 +113,22 @@ function keyControl(e) {
 
   }
 }
+function showControls(e){
+  // console.log(vid.paused);
+    controlBar.classList.remove('hide-bar');
+}
+function hideControls(e){
+  // console.log(vid.paused);
+  if(!vid.paused){
+    controlBar.classList.add('hide-bar');
+  } else {
+    controlBar.classList.remove('hide-bar');
+  }
+
+}
 
 function updateSeekTime() {
-  'use strict';
+
   var newTime = vid.currentTime * (100 / vid.duration),
     cMins = Math.floor(vid.currentTime / 60),
     cSecs = Math.floor(vid.currentTime - cMins * 60),
@@ -125,7 +144,7 @@ function updateSeekTime() {
   dTimeText.innerHTML = dMins + ":" + dSecs;
 }
 function vidMute() {
-  "use strict";
+
   if (vid.muted) {
     vid.muted = false;
     volumeSlider.value = vid.volume * 100;
@@ -155,7 +174,7 @@ function vidMute() {
 }
 
 function setVolume() {
-  "use strict";
+
   vid.volume = volumeSlider.value / 100;
   if (volumeSlider.value >= 61 && volumeSlider.value <= 100) {
     mutebtn.innerHTML = '<i class="pg-max-vol"></i>';
@@ -196,6 +215,8 @@ function toggleFullscreen() {
     } else if (document.webkitExitFullscreen) {
       fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
       document.webkitExitFullscreen();
+    } else {
+      fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
     }
 
     fullscreenbtn.innerHTML = '<i class="pg-enter-fullscrn"></i>';
