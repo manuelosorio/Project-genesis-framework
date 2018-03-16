@@ -710,8 +710,10 @@ html {
 .row {
   display: flex;
   overflow: hidden;
-  overflow-padding: 0.16667%;
-  overflow-margin: 2%;
+}
+
+.row + .row {
+  margin: 2% 0;
 }
 
 .row .col {

@@ -1,44 +1,47 @@
 @mixin flexGrid
   @mixin flexGrid($count,$gutter)
-  	// calculates single grid item
-  	$gridWidth: 100 / $count
-  	//calculates excess margin equally to the column count
-  	$gutterSpace: $gutter / $count
-  	.row
-  		display: flex
-  		overflow: hidden
-      padding: unquote($gutterSpace  + '%')
-      margin: unquote($gutterSpace * $count + '%')
-  		.col
-  			float: left
-  			flex-wrap: nowrap
-  			+ .col
-  				margin-left: unquote($gutter + '%')
-  	// The loop that creates all of your grid item classes and widths
-  	@for $i from 1 through $count
-  		.col-#{$i}
-  			width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')
-  	//Flex Grid Breakpoint Styling
-  	@media screen and (max-width:$medium)
-  		.row
-  			flex-direction: column
-  			flex-wrap: wrap
-  			+ .row
-  				margin-top: 0
-  			.col
-  				+ .col
-  					margin-left: 0
-  			@for $i from 1 through $count
-  				.col-#{$i}
-  					width: 100%
-  					margin-top: 20px
-  					//Loop to create orders for you to rearrange cols on breakpoints
-  				.col.col-order-#{$i}
-  					order: #{$i}
+    // calculates single grid item
+    $gridWidth: 100 / $count
+    //calculates excess margin equally to the column count
+    $gutterSpace: $gutter / $count
+    .row
+      display: flex
+      overflow: hidden
+
+      // margin: 0 unquote($gutterSpace * $count + '%')
+      // padding: unquote($gutterSpace  + '%') 0
+      + .row
+        margin: unquote($gutterSpace * $count + '%') 0
+      .col
+        float: left
+        flex-wrap: nowrap
+        + .col
+          margin-left: unquote($gutter + '%')
+    // The loop that creates all of your grid item classes and widths
+    @for $i from 1 through $count
+      .col-#{$i}
+        width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')
+    //Flex Grid Breakpoint Styling
+    @media screen and (max-width:$medium)
+      .row
+        flex-direction: column
+        flex-wrap: wrap
+        + .row
+          margin-top: 0
+        .col
+          + .col
+            margin-left: 0
+        @for $i from 1 through $count
+          .col-#{$i}
+            width: 100%
+            margin-top: 20px
+            //Loop to create orders for you to rearrange cols on breakpoints
+          .col.col-order-#{$i}
+            order: #{$i}
   // Defining Grid
   @include flexGrid(12,2)
   //column count, gutter
   //Presentation Only
   // body
-  	// font-family: sans-serif
-  	// padding: 50px
+    // font-family: sans-serif
+    // padding: 50px

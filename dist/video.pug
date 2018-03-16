@@ -14,7 +14,7 @@ html(lang='en')
     script(src="assets/js/highlight.pack.js")
     script hljs.initHighlightingOnLoad();
     script(src='assets/js/project-genesis.js')
-    title Project Genesis - Documentation
+    title Project Genesis - HTML5 Video
 
     // Start Social Media Meta Tags
     meta(property='og:title', content='Project Genesis | Css Framework')
@@ -43,67 +43,41 @@ html(lang='en')
           .menu-bar
           .menu-bar
     .page-content
-      .hero
-        .hero-container
-          .row
-            .col.col-12
-              h1 Project Genesis
-          .row
-            .col.col-12
-              strong Work in progress CSS framework
-          .cta
-            a.pg-double-down-arrow(href='#about')
-      #about.about
-        .row
-          .col.col-12
-            h2.header What is Project Genesis?
-        .row.info
-          .col.col-12
-            p
-              strong Project Genesis
-              |  is a css framework meant to be the the starting points for your projects.
-        .row
-          .col.col-4.col-order-2
-            .info-icon
-              img(src='assets/img/code.png', alt='project genesis made with sass')
-            .row
-              .col.col-12
-                .info-subtext
-                  strong Use Your Own styles
+      .row
+        .col.col-12
+          .container
+            #video_player
+              video#video
+                source(src='Intro-StormofColorRunfixed.mp4', type='video/mp4')
+                // Safari / iOS, IE9
+                source(src='http://files.simey.me/html5-vids/trailer.webm', type='video/webm')
+                // Chrome10+, Ffx4+, Opera10.6+
+                source(src='http://files.simey.me/html5-vids/trailer.ogv', type='video/ogg')
+                // Firefox3.6+ / Opera 10.5+
+                .loading
+                  | I have a bad feeling about this... 
                   br
-                  p Don't be shy, add your own styles.
-          .col.col-4.col-order-1
-            .info-icon
-              img(src='assets/img/sass.png', alt='project genesis made with sass')
-            .row
-              .col.col-12
-                .info-subtext
-                  strong Made with SASS
-                  br
-                  p
-                    | Project Genesis is modular through the use of 
-                    a(href='http://sass-lang.com/', target='_blank') SASS
-                    | . Can add your own own modules or remove modules you don't need.
-          .col.col-4.col-order-3
-            .info-icon
-              img(src='assets/img/responsive.png', alt='project genesis made with sass')
-            .row
-              .col.col-12
-                .info-subtext
-                  strong Responsive
-                  br
-                  p Responsive through the use of a grid system.
-        div(style='background: #1c9996; width:100%; height: auto; padding: 75px 15px; color: rgba(255, 255, 255, 0.85)')
-          .row
-            .col.col-12
-              h2.header Lorem ipsum dolor sit amet
-          .row.info
-            .col.col-12
-              p(style="text-align: left; padding: 0 25px;")
-                | Project Genesis is currently being worked on and will not be publicly released until most of the features
-                | I'm working on are functional. That being said my plans for this framework is to make it easy to understand
-                | while being functional, Although I recommend using the sass version of this framework, I'll also provide a
-                | css download link.
+                  | 			  ... your browser doesn't support the video format!
+              #video_controls_bar
+                button#playpausebtn
+                  i.pg-play
+                input#seekslider(type='range', min='0', max='100', value='0', step='1')
+                span#time
+                  span#cTimeText 00:00
+                  |   / 
+                  span#dTimeText 00:00
+                button#mutebtn
+                  i.pg-max-vol
+                input#volumeSlider(type='range', min='0', max='100', value='100', step='.05')
+                button#fullscreenbtn
+                  i.pg-enter-fullscrn
+
+
+      .row
+        .col.col-2.col-md-4
+        .col.col-8.col-md-6
+          include ../_docs/video.html
+
 
       .footer
         .row
