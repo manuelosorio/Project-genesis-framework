@@ -8,13 +8,8 @@ html(lang='en')
     meta(name='description', content='Project Genesis is a css framework meant to be the the starting point for your projects.')
     meta(name='keywords', content='Manuel Osorio, Project Genesis, Css Framework, Genesis, Project, Web Framework ')
     meta(name='robots', content='index, follow')
-    link(rel='stylesheet', href='assets/css/project-genesis.css')
-    link(rel='stylesheet', href='assets/css/app.css')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-    script(src="assets/js/highlight.pack.js")
-    script hljs.initHighlightingOnLoad();
-    script(src='assets/js/project-genesis.js')
-    title Project Genesis - Documentation
+    link(rel='stylesheet', href='assets/css/project-genesis.min.css')
+    link(rel='stylesheet', href='assets/css/app.min.css')
 
     // Start Social Media Meta Tags
     meta(property='og:title', content='Project Genesis | Css Framework')
@@ -93,18 +88,19 @@ html(lang='en')
                   strong Responsive
                   br
                   p Responsive through the use of a grid system.
-        div(style='background: #1c9996; width:100%; height: auto; padding: 75px 15px; color: rgba(255, 255, 255, 0.85)')
+        div(style='background: #20afab; width:100%; height: auto; padding: 75px 15px; color: rgba(255, 255, 255, 0.85)')
           .row
             .col.col-12
               h2.header Lorem ipsum dolor sit amet
           .row.info
             .col.col-12
               p(style="text-align: left; padding: 0 25px;")
-                | Project Genesis is currently being worked on and will not be publicly released until most of the features
-                | I'm working on are functional. That being said my plans for this framework is to make it easy to understand
-                | while being functional, Although I recommend using the sass version of this framework, I'll also provide a
-                | css download link.
-
+                | Project Genesis is currently being worked and consitently being updated to make the current features functional and more are being added. I'm working on are functional. That being said my plans for this framework is to make it easy to understand while being functional, Although I recommend using the sass version of this framework, I'll also provide a css download link.
+                .row
+                  .col
+                    a(href="https://github.com/manuelosorio/Project-genesis-framework" target="_blank" rel="noopener noreferrer").btn.teal.large.outline.round Github
+                  .col
+                    a(href="test.zip").btn.lime.large.round Download
       .footer
         .row
           .col.col-12.col-md-12
@@ -120,3 +116,7 @@ html(lang='en')
                 a(href=item.link class=item.class) #{item.i}
                 |
                 |
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src="assets/js/highlight.pack.js")
+    script hljs.initHighlightingOnLoad();
+    script(src='assets/js/project-genesis.js')

@@ -7,11 +7,10 @@
     .row
       display: flex
       overflow: hidden
+      justify-content: center
+      margin: 0 unquote($gutterSpace * $count + '%')
+      padding: unquote($gutterSpace  + '%') 0
 
-      // margin: 0 unquote($gutterSpace * $count + '%')
-      // padding: unquote($gutterSpace  + '%') 0
-      + .row
-        margin: unquote($gutterSpace * $count + '%') 0
       .col
         float: left
         flex-wrap: nowrap

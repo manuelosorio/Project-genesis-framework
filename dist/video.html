@@ -8,13 +8,8 @@
     <meta name="description" content="Project Genesis is a css framework meant to be the the starting point for your projects.">
     <meta name="keywords" content="Manuel Osorio, Project Genesis, Css Framework, Genesis, Project, Web Framework ">
     <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="assets/css/project-genesis.css">
-    <link rel="stylesheet" href="assets/css/app.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/highlight.pack.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="assets/js/project-genesis.js"></script>
-    <title>Project Genesis - HTML5 Video</title>
+    <link rel="stylesheet" href="assets/css/project-genesis.min.css">
+    <link rel="stylesheet" href="assets/css/app.min.css">
     <!-- Start Social Media Meta Tags-->
     <meta property="og:title" content="Project Genesis | Css Framework">
     <meta property="og:description" content="Project Genesis is a css framework meant to be the the starting points for your projects.">
@@ -47,21 +42,21 @@
     </div>
     <div class="page-content">
       <div class="row">
-        <div class="col col-12">
+        <div class="col col-10">
           <div class="container">
             <div id="video_player">
               <video id="video">
-                <source src="Intro-StormofColorRunfixed.mp4" type="video/mp4">
+                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
                 <!-- Safari / iOS, IE9-->
-                <source src="http://files.simey.me/html5-vids/trailer.webm" type="video/webm">
+                <source src="https://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
                 <!-- Chrome10+, Ffx4+, Opera10.6+-->
-                <source src="http://files.simey.me/html5-vids/trailer.ogv" type="video/ogg">
+                <source src="https://media.w3.org/2010/05/sintel/trailer.ogy" type="video/ogg">
                 <!-- Firefox3.6+ / Opera 10.5+-->
-                <div class="loading">I have a bad feeling about this... <br>			  ... your browser doesn't support the video format!</div>
+                <div class="loading">I have a bad feeling about this... <br>... your browser doesn't support the video format!</div>
               </video>
               <div id="video_controls_bar">
                 <button id="playpausebtn"><i class="pg-play"></i></button>
-                <input id="seekslider" type="range" min="0" max="100" value="0" step="1"><span id="time"><span id="cTimeText">00:00</span>  / <span id="dTimeText">00:00</span></span>
+                <input id="seekslider" type="range" min="0" max="100" value="0" step="1"><span id="time"><span id="cTimeText">00:00</span>/ <span id="dTimeText">00:00</span></span>
                 <button id="mutebtn"><i class="pg-max-vol"></i></button>
                 <input id="volumeSlider" type="range" min="0" max="100" value="100" step=".05">
                 <button id="fullscreenbtn"><i class="pg-enter-fullscrn"></i></button>
@@ -71,25 +66,29 @@
         </div>
       </div>
       <div class="row">
-        <div class="col col-2 col-md-4"></div>
-        <div class="col col-8 col-md-6"><pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
+        <div class="col col-10"><pre><code class="lang-html">&lt;div class=&quot;container&quot;&gt;
   &lt;div id=&quot;video_player&quot;&gt;
     &lt;video id=&quot;video&quot;&gt;
-      &lt;source src=&quot;Intro-StormofColorRunfixed.mp4&quot; type=&quot;video/mp4&quot;&gt;
+      &lt;source src=&quot;https://media.w3.org/2010/05/sintel/trailer.mp4&quot; type=&quot;video/mp4&quot;&gt;
       &lt;!-- Safari / iOS, IE9--&gt;
-      &lt;source src=&quot;http://files.simey.me/html5-vids/trailer.webm&quot; type=&quot;video/webm&quot;&gt;
+      &lt;source src=&quot;https://media.w3.org/2010/05/sintel/trailer.webm&quot; type=&quot;video/webm&quot;&gt;
       &lt;!-- Chrome10+, Ffx4+, Opera10.6+--&gt;
-      &lt;source src=&quot;http://files.simey.me/html5-vids/trailer.ogv&quot; type=&quot;video/ogg&quot;&gt;
+      &lt;source src=&quot;https://media.w3.org/2010/05/sintel/trailer.ogy&quot; type=&quot;video/ogg&quot;&gt;
       &lt;!-- Firefox3.6+ / Opera 10.5+--&gt;
-      &lt;div class=&quot;loading&quot;&gt;I have a bad feeling about this... &lt;br&gt;
-      ... your browser doesn&#39;t support the video format!&lt;/div&gt;
+      &lt;div class=&quot;loading&quot;&gt;I have a bad feeling about this...
+        &lt;br&gt;... your browser doesn&#39;t support the video format!
+      &lt;/div&gt;
     &lt;/video&gt;
+
     &lt;div id=&quot;video_controls_bar&quot;&gt;
       &lt;button id=&quot;playpausebtn&quot;&gt;&lt;i class=&quot;pg-play&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+
       &lt;input id=&quot;seekslider&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; step=&quot;1&quot;&gt;
+
       &lt;span id=&quot;time&quot;&gt;
-        &lt;span id=&quot;cTimeText&quot;&gt;00:00&lt;/span&gt;  / &lt;span id=&quot;dTimeText&quot;&gt;00:00&lt;/span&gt;
+        &lt;span id=&quot;cTimeText&quot;&gt;00:00&lt;/span&gt;/ &lt;span id=&quot;dTimeText&quot;&gt;00:00&lt;/span&gt;
       &lt;/span&gt;
+
       &lt;button id=&quot;mutebtn&quot;&gt;&lt;i class=&quot;pg-max-vol&quot;&gt;&lt;/i&gt;&lt;/button&gt;
       &lt;input id=&quot;volumeSlider&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;100&quot; step=&quot;.05&quot;&gt;
       &lt;button id=&quot;fullscreenbtn&quot;&gt;&lt;i class=&quot;pg-enter-fullscrn&quot;&gt;&lt;/i&gt;&lt;/button&gt;
@@ -122,5 +121,9 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="assets/js/project-genesis.js"></script>
   </body>
 </html>
