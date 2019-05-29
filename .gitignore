@@ -76,3 +76,4 @@ Intro-StormofColorRunfixed.mp4
 *.pug
 /test
 .vscode/
+prepros-6.config

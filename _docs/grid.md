@@ -36,6 +36,4 @@
           .col-#{$i}
             width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')
   @include Grid(12, 2)
-
-
 ```

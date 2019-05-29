@@ -1,7 +1,7 @@
 @import 'flex-grid'
-@import 'noflex-grid'
+@import 'float-grid'
 
 @if ($flex)
-  @include flexGrid
+  @include flexGrid(12,2)
 @else
-  @include noFlexGrid
+  @include floatGrid(12,2)

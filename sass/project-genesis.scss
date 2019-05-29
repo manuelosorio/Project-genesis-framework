@@ -13,15 +13,22 @@
 */
 
 // Root of All SASS files for Project Genesis
-@import 'normalize';
 @import 'settings';
+@import 'normalize';
+html {
+  font-family: $family;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 a {
   text-decoration: none;
 }
-html {
-  font-family: $family;
-}
-@import 'project-genesis/imports';
+
 .hide{
   display: none;
 }
+
+@import 'project-genesis/imports';

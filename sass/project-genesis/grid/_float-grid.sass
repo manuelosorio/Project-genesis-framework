@@ -1,0 +1,40 @@
+@mixin floatGrid($count, $gutter)
+  $gridWidth: 98 / $count
+  $gutterSpace: $gutter / $count
+  .row
+    padding: unquote($gutterSpace  + '%')
+    margin: 2% auto
+    width: 85%
+    max-width: 1200px
+
+
+    &::after
+      content: ""
+      clear: both
+      display: table
+  [class*="col-"]
+    width: 100%
+    float: left
+    + [class*="col-"]
+      margin-top: unquote($gutter + '%')
+  @media screen and (min-width: $small)
+    [class*="col-sm"] + [class*="col-sm"]
+      margin-top: 0
+      margin-left: unquote($gutter + '%')
+    @for $i from 1 through $count
+      .col-sm-#{$i}
+        width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')
+  @media screen and (min-width: $medium)
+    [class*="col-md"] + [class*="col-md"]
+      margin-top: 0
+      margin-left: unquote($gutter + '%')
+    @for $i from 1 through $count
+      .col-md-#{$i}
+        width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')
+  @media screen and (min-width: $large)
+    [class*="col-"] + [class*="col-"]
+      margin-top: 0
+      margin-left: unquote($gutter + '%')
+    @for $i from 1 through $count
+      .col-#{$i}
+        width: unquote(($gridWidth * $i) - $gutter + ($gutterSpace * $i) + '%')

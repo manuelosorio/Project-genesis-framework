@@ -13,7 +13,7 @@
   @return null
 
 .btn
-  font: $family
+  font-family: $family
   text-align: center
   background: rgba($aqua, .9999999)
   color: rgba(darken($aqua, 25%), .9999999)
@@ -22,6 +22,8 @@
   display: inline-block
   transition: $transition
   max-width: 250px
+  + .btn
+    margin-left: 25px
   &:hover
     background: rgba(darken($aqua, 25%), .9999999)
     color:  rgba($aqua, .9999999)

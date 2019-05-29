@@ -152,13 +152,13 @@ i {
     background-color: #161616;
     color: #565656; }
 
+.box {
+  background: #2AD8D3;
+  padding: 15px 0; }
+
 @media screen and (max-width: 700px) {
   .cbox {
     width: 100%; } }
-
-.box {
-  background: #2AD8D3;
-  padding: 10px 10px; }
 
 @-webkit-keyframes cta-shake {
   50%, 99% {
@@ -229,6 +229,7 @@ i {
   transition: 250ms ease-in-out; }
   .hero-container {
     -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center; }
     .hero-container h1 {
       color: white; }
